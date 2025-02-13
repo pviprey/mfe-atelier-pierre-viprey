@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 // Dynamically import the remote components
 async function loadRemoteComponents() {
@@ -10,13 +10,17 @@ async function loadRemoteComponents() {
     // Mount Header
     const headerContainer = document.getElementById('header-container');
     if (headerContainer) {
-      ReactDOM.render(React.createElement(Header), headerContainer);
+      const root = createRoot(headerContainer); // 👈 Utilisation de createRoot
+      root.render(React.createElement(Header));
+
+      // ReactDOM.render(React.createElement(Header), headerContainer);
     }
 
     // Mount Button
     const buttonContainer = document.getElementById('button-container');
     if (buttonContainer) {
-      ReactDOM.render(React.createElement(Button), buttonContainer);
+      const root = createRoot(buttonContainer);
+      root.render(React.createElement(Button));    
     }
   } catch (error) {
     console.error('Error loading remote components:', error);
