@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 // Dynamically import the remote components
 async function loadRemoteComponents() {
   try {
-    const { default: Header } = await import('header_mfe/header');
-    const { default: Button } = await import('header_mfe/button');
+    const { default: Header } = await import('mfe/header');
+    const { default: Button } = await import('mfe/button');
 
     // Mount Header
     const headerContainer = document.getElementById('header-container');
