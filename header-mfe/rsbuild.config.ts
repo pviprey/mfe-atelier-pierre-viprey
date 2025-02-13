@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     pluginReact(),
     pluginModuleFederation({
-      name: 'federation_provider',
+      name: 'mfe',
       exposes: {
         './button': './src/button/button.tsx',
         './header': './src/header/header.tsx'
