@@ -9,7 +9,10 @@ export default defineConfig({
         mfe:
           'mfe@http://localhost:3000/mf-manifest.json',
       },
-      shared: ['react', 'react-dom'],
+      shared: {
+        react: { singleton: true, requiredVersion: '^18.0.0' },
+        'react-dom': { singleton: true, requiredVersion: '^18.0.0' },
+      }
     }),
   ],
   server: {

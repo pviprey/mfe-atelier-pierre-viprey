@@ -21,6 +21,8 @@
     "typescript-eslint": "^8.22.0"
   },
   "dependencies": {
-    "@module-federation/enhanced": "^0.8.11"
+    "@module-federation/enhanced": "^0.8.11",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
